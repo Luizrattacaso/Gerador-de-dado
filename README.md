@@ -1,2 +1,4 @@
 # Gerador de dado
- Gera um número aleatorio de 1 a 6, mostra uma arte visual de um dado e sua soma
+Gerador de números aleatórios de 1 a 6 com uma arte visual de um dado
+
+Podendo ser mostrado diversos dados e a soma de todos eles
