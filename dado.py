@@ -1,8 +1,6 @@
 from random import randint
-
 lista = []
 soma = 0 
-
 dados = {
     1 : ("╔-------╗",
          "|       |",
@@ -40,20 +38,21 @@ dados = {
          "| •   • |",
          "╚-------╝"),
 }
+def principal(lista,soma,dados):
+     vezes = int(input("Digite quantos dados você quer sortear: "))
+     for x in range(vezes): 
+          lista.append(randint(1 , 6))
+          soma += lista[x]
+     print()
 
-vezes = int(input("Digite quantos dados você quer sortear: "))
+     print(f"Os valores dos dados foram: {lista}\n")
 
-for x in range(vezes): 
-    d = randint(1 , 6)
-    lista.append(d)
-    soma += d
-print()
+     for linha in range(5):
+          for i in lista:
+               print(dados.get(i)[linha], end = "")
+          print()
 
-print(f"Os valores dos dados foram: {lista}\n")
+     print(f"\nO somatório dos valores é igual a {soma} ")
 
-for linha in range(5):
-    for i in lista:
-        print(dados.get(i)[linha], end = "")
-    print()
-
-print(f"\nO somatório dos valores é igual a {soma} ")
+if __name__ == "__main__":
+     principal(lista,soma,dados)
